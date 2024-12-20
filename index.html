@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <style>
+        /* General Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #2b5876, #4e4376);
+            color: white;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: rgba(0, 0, 0, 0.8);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        }
+
+        header .logo {
+            font-size: 1.8em;
+            font-weight: bold;
+            color: #ffcc00;
+            text-shadow: 0 0 10px rgba(255, 204, 0, 0.8);
+        }
+
+        header nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        header nav ul li {
+            margin-left: 20px;
+        }
+
+        header nav ul li a {
+            text-decoration: none;
+            color: white;
+            transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
+        }
+
+        header nav ul li a:hover {
+            color: #ffcc00;
+            text-shadow: 0 0 10px #ffcc00;
+        }
+
+        main {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .hero {
+            margin: 20px 0;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+            color: white;
+        }
+
+        .hero h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 0 0 10px rgba(255, 204, 0, 0.8);
+        }
+
+        .hero p {
+            font-size: 1.2em;
+            line-height: 1.5;
+        }
+
+        .playlist {
+            margin: 20px auto;
+            text-align: center;
+            padding: 20px;
+            background: url('playlist-bg.jpg') no-repeat center center;
+            background-size: cover;
+            border-radius: 10px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+            color: white;
+        }
+
+        .playlist h3 {
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            text-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
+        }
+
+        .playlist ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .playlist ul li {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 15px;
+            padding: 10px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            transition: background 0.3s ease-in-out;
+        }
+
+        .playlist ul li img {
+            width: 50px;
+            height: 50px;
+            border-radius: 5px;
+            margin-right: 10px;
+        }
+
+        .playlist ul li span {
+            flex-grow: 1;
+            text-align: left;
+            font-size: 1.2em;
+        }
+
+        .playlist ul li audio {
+            flex-basis: 150px;
+        }
+
+        .playlist ul li:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: rgba(0, 0, 0, 0.8);
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            color: #ffcc00;
+        }
+
+        /* Media Queries */
+        @media (max-width: 768px) {
+            header nav ul {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .hero h1 {
+                font-size: 2em;
+            }
+
+            .hero p {
+                font-size: 1em;
+            }
+
+            .playlist ul li {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .playlist ul li audio {
+                margin-top: 10px;
+                flex-basis: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">My Music Player</div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Playlists</a></li>
+                <!-- <li><a href="#">Genres</a></li>
+                <li><a href="#">About</a></li> -->
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <div class="hero">
+            <h1>Welcome to My Music Player</h1>
+            <p>Discover, play, and enjoy your favorite tracks anytime, anywhere!</p>
+        </div>
+
+        <!-- Music Playlist Section -->
+        <div class="playlist">
+            <h3>Your Playlist</h3>
+            <ul>
+                <!-- Entire Playlist Container Clickable -->
+                <li>
+                    <a href="song1.html" style="display: flex; align-items: center; justify-content: space-between; text-decoration: none; color: white;">
+                        <img src="a1.webp" alt="Song 1">
+                        <span>Song Title 1</span>
+                      
+                    </a>
+                </li>
+               
+                <li>
+                    <a href="song3.html" style="display: flex; align-items: center; justify-content: space-between; text-decoration: none; color: white;">
+                        <img src="a1.webp" alt="Song 3">
+                        <span>Song Title 3</span>
+                        
+                    </a>
+                </li>
+
+
+
+                <li>
+                    <a href="song11.html" style="display: flex; align-items: center; justify-content: space-between; text-decoration: none; color: white;">
+                        <img src="a1.webp" alt="Song 3">
+                        <span>Song Title 11</span>
+                        
+                    </a>
+                </li>
+
+                <li>
+                    <a href="song12.html" style="display: flex; align-items: center; justify-content: space-between; text-decoration: none; color: white;">
+                        <img src="a1.webp" alt="Song 3">
+                        <span>Song Title 12</span>
+                        
+                    </a>
+                </li>
+
+
+                <li>
+                    <a href="song13.html" style="display: flex; align-items: center; justify-content: space-between; text-decoration: none; color: white;">
+                        <img src="a1.webp" alt="Song 3">
+                        <span>Song Title 13</span>
+                        
+                    </a>
+                </li>
+
+
+              
+                <li>
+                    <a href="song15.html" style="display: flex; align-items: center; justify-content: space-between; text-decoration: none; color: white;">
+                        <img src="a1.webp" alt="Song 3">
+                        <span>Song Title 15</span>
+                        
+                    </a>
+                </li>
+
+
+                <li>
+                    <a href="song16.html" style="display: flex; align-items: center; justify-content: space-between; text-decoration: none; color: white;">
+                        <img src="a1.webp" alt="Song 3">
+                        <span>Song Title 16</span>
+                        
+                    </a>
+                </li>
+
+
+
+
+               
+
+
+
+
+                
+
+
+
+
+
+            </ul>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 My Music Player. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
