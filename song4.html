@@ -9,7 +9,119 @@
         * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Song 1 - My Music Player</title>
+    <style>
+        /* General Styles */
+        * {
+            margin: 0;
+            padding: 0;
             box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            color: white;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        /* Background Video */
+        .background-video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+            filter: brightness(0.5);
+        }
+
+        /* Content Styling */
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            text-shadow: 0 0 15px rgba(255, 204, 0, 0.8);
+            text-align: center;
+        }
+
+        .song-container {
+            text-align: center;
+            background: rgba(134, 131, 131, 0.6);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(51, 41, 41, 0.5);
+            width: 90%;
+            max-width: 600px;
+        }
+
+        .album-art {
+            width: 100%;
+            max-width: 300px;
+            margin: 0 auto 20px;
+            border-radius: 10px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s ease;
+        }
+
+        .album-art:hover {
+            transform: scale(1.1);
+        }
+
+        audio {
+            width: 100%;
+            margin-top: 20px;
+            border-radius: 10px;
+            outline: none;
+            background-color: #333;
+        }
+
+        footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            text-align: center;
+            color: #ffcc00;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Background Video -->
+    <video class="background-video" autoplay muted loop>
+        <source src="pawan singh aaho raja.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <div class="song-container">
+        <h1>Aaho raja</h1>
+        
+        <!-- Album Art Image -->
+        <img class="album-art" src="a1.webp" alt="Album Art">
+
+        <!-- Audio Player -->
+        <audio controls>
+            <source src="pawansing.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+
+ 
+
+</body>
+</html>
+
         }
 
         body {
